@@ -47,6 +47,15 @@ class Base(ABC):
             else:
                 print(f"Missing reference in {self.path}: {data['id']}")
 
+        if 'individual' in data and type(data['individual']) is str:
+            ref = collection.get_by_id(data['individual'], self.path)
+            if ref is not None:
+                r.append(ref)
+            else:
+                print(f"Missing reference in {self.path}: {data['individual']}")
+
+
+
         for k in data:
             if type(data[k]) is dict:
                 self._find_references_in_dict(r, data[k], collection)

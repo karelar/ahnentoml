@@ -1,3 +1,6 @@
+"""
+Simple script to validate all files in a given project.
+"""
 if __name__ == "__main__":
     from pathlib import Path
     import os

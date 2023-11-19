@@ -45,3 +45,12 @@ def read_collection(base_dir: str) -> Collection:
     #     raise Exception(errors)
     return Collection(base_dir, by_type, by_path)
 
+
+"""
+Reads the project in the current directory and some simple checking that their structure/references are valid.
+Any invalid toml files are ignored at this time.
+"""
+if __name__ == "__main__":
+    c = read_collection('.')
+    for path in c.by_path:
+        c.by_path[path].references(c)
