@@ -1,0 +1,8 @@
+[project]
+name = "py-ahnen"
+description = "A set of python tools for reading/querying geneology toml files labeled with ahnentafel"
+version = "0.0.1"
+
+dependencies = [
+    "tomli",
+]
