@@ -67,8 +67,8 @@ class Base(ABC):
     def is_empty(self) -> bool:
         return len(self._data) == 0
 
-    @abc.abstractproperty
     @property
+    @abc.abstractmethod
     def summary(self):
         pass
 

@@ -6,6 +6,7 @@ from .types.base import Base
 
 from typing import Dict, Union
 
+
 class Collection:
     def __init__(self, base_dir: str, by_type: Dict[str, Dict[str, Base]], by_path: Dict[str, Base]):
         self.by_type = by_type
@@ -51,6 +52,6 @@ Reads the project in the current directory and some simple checking that their s
 Any invalid toml files are ignored at this time.
 """
 if __name__ == "__main__":
-    c = read_collection('.')
+    c = read_collection('')
     for path in c.by_path:
         c.by_path[path].references(c)

@@ -13,6 +13,6 @@ def read(base_dir: str,  id: str) -> Base:
         return read_ind(base_dir, name)
 
 
-def id_components(id:str) -> Tuple[str, str]:
+def id_components(id: str) -> Tuple[str, str]:
     type_, name = id.split('.', 1)
     return type_, name
