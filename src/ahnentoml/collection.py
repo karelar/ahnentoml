@@ -52,6 +52,6 @@ Reads the project in the current directory and some simple checking that their s
 Any invalid toml files are ignored at this time.
 """
 if __name__ == "__main__":
-    c = read_collection('')
+    c = read_collection('.')
     for path in c.by_path:
         c.by_path[path].references(c)
